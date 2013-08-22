@@ -1,5 +1,8 @@
 all:
-	find . | grep '\.java$$' | xargs javac
+	find ./src | grep '\.java$$' | xargs javac
+
+test: all
+	cd src && java Test
 
 clean:
-	find . | grep '\.class$$' | xargs rm -f
+	find ./src | grep '\.class$$' | xargs rm -f

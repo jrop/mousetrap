@@ -8,7 +8,7 @@ public abstract class Listener<T> {
 
 	private boolean removePending = false;
 	protected boolean isRemovalPending() { return removePending; }
-	public void remove() { removePending = true; }
+	public void removeListener() { removePending = true; }
 	
 	public abstract void handle(Event<T> event, T args);
 }
